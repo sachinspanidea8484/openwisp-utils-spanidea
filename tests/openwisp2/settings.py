@@ -116,7 +116,7 @@ OPENWISP_ADMIN_THEME_LINKS = [
     },  # custom css for testing menu icons
     {
         "type": "image/x-icon",
-        "href": "ui/openwisp/images/favicon.png",
+        "href": "ui/openwisp/images/nokia.png",
         "rel": "icon",
     },
 ]
