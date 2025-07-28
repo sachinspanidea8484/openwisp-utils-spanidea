@@ -1,3 +1,4 @@
 # For testing Dependency loaders
-openwisp_controller @ https://github.com/sachinspanidea8484/openwisp-controller-spanidea/tarball/main
+# openwisp_controller @ https://github.com/sachinspanidea8484/openwisp-controller-spanidea/tarball/main
+openwisp-controller @ git+https://sachin:kkVgLq7Uyd5vgKzTkDEf@git.spanidea.com/nokia-test-automation/openwisp-controller-spanidea.git@dev
 freezegun
