@@ -3,22 +3,22 @@
 
 {% block extrastyle %}
 {{ block.super }}
-<link rel="stylesheet" type="text/css" href="{% static " admin/css/changelists.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/changelists.css' %}">
 {% if cl.formset %}
-<link rel="stylesheet" type="text/css" href="{% static " admin/css/forms.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}">
 {% endif %}
-<link rel="stylesheet" type="text/css" href="{% static " admin/css/ow-filters.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/ow-filters.css' %}">
 {% if cl.formset or action_form %}
 <script src="{% url 'admin:jsi18n' %}"></script>
 {% endif %}
 {% if cl.has_filters %}
-<script src="{% static " admin/js/ow-filter.js" %}"></script>
+<script src="{% static 'admin/js/ow-filter.js' %}"></script>
 {% endif %}
 {{ media.css }}
 {% if not actions_on_top and not actions_on_bottom %}
 <style>
   #changelist table thead th:first-child {
-    width: inherit
+    width: inherit;
   }
 </style>
 {% endif %}
@@ -48,10 +48,10 @@
 <div id="ow-changelist-filter">
   <div class="filters-bottom">
     <span class="left-arrow">
-      <img src="{% static " ui/openwisp/images/left-arrow.svg" %}" alt="left">
+      <img src="{% static 'ui/openwisp/images/left-arrow.svg' %}" alt="left">
     </span>
     <span class="right-arrow">
-      <img src="{% static " ui/openwisp/images/right-arrow.svg" %}" alt="right">
+      <img src="{% static 'ui/openwisp/images/right-arrow.svg' %}" alt="right">
     </span>
     <div aria-label="changelist filters region" tabindex="0" class="ow-filter-slider">
       <div class="slider">
@@ -111,5 +111,4 @@
     </div>
   </div>
 </div>
-
 {% endblock %}
