@@ -183,7 +183,7 @@ a:focus {
   text-decoration: none;
 }
 #changelist-filter li.selected a {
-  color: blue !important;
+  color: red !important;
 }
 #netjsonconfig-hint,
 #netjsonconfig-hint a,
