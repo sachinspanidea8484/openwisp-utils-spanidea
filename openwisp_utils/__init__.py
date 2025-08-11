@@ -1,6 +1,8 @@
 VERSION = (1, 2, 0, "alpha")
 __version__ = VERSION  # alias
 
+default_app_config = "admin_theme.apps.AdminThemeConfig"
+
 
 def get_version():
     version = "%s.%s" % (VERSION[0], VERSION[1])

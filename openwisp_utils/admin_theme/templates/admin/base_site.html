@@ -3,6 +3,29 @@
 
 {% block title %}{{ title }} | {{ site_title }}{% endblock %}
 
+{% block extrahead %}
+{{ block.super }}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.js-datetime').forEach(function (el) {
+    const utcStr = el.dataset.datetime;
+    const date = new Date(utcStr);
+    if (!isNaN(date)) {
+      el.textContent = date.toLocaleString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      });
+    }
+  });
+});
+</script>
+{% endblock %}
+
 {% block extrastyle %}
 {{ block.super }}
 {% if OPENWISP_ADMIN_THEME_LINKS %}

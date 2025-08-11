@@ -38,6 +38,8 @@ class OpenWispAdminThemeConfig(AppConfig):
     name = "openwisp_utils.admin_theme"
 
     def ready(self):
+        from . import admin_datetime_format
+        admin_datetime_format.patch_admin_datetime_display()
         admin_theme_settings_checks(self)
         self.register_menu_groups()
         self.modify_admin_theme_settings_links()
