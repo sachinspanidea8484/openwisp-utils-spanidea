@@ -1,5 +1,5 @@
 {% load admin_list i18n %}
-
+{%load range_display %}
 
 <style>
   .custom-paginator {
@@ -57,17 +57,13 @@
 
 <div class="custom-paginator">
   
-   <span class="result-count">
-  {%if pagination_required%}
-    {{ cl.result_list|length }} / {{ cl.result_count }}
-  {%else%}
-    {{ cl.result_count }}
-  {%endif%}
-  {% if cl.result_count == 1 %}
-    {{ cl.opts.verbose_name }}
-  {% else %}
-    {{ cl.opts.verbose_name_plural }}
-  {% endif %}
+  <span class="result-count">
+    {% page_range_display cl %}
+    {% if cl.result_count == 1 %}
+      {{ cl.opts.verbose_name }}
+    {% else %}
+      {{ cl.opts.verbose_name_plural }}
+    {% endif %}
 </span>
   <div class="pagination-meta">
    {% if pagination_required %}
