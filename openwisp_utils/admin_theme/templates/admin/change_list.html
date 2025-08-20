@@ -26,6 +26,68 @@
 
 {% block extrahead %}
 {{ block.super }}
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      // Load selected IDs from localStorage
+      let selectedItems = new Set(JSON.parse(localStorage.getItem("selectedItems") || "[]"));
+
+      // Restore checkboxes on page load
+      document.querySelectorAll("input.action-select").forEach(cb => {
+          if (selectedItems.has(cb.value)) {
+              cb.checked = true;
+          }
+      });
+      updateCounter();
+      // Listen for checkbox changes
+      document.addEventListener("change", function (e) {
+          if (e.target.classList.contains("action-select")) {
+              let id = e.target.value;
+              if (e.target.checked) {
+                  selectedItems.add(id);
+              } else {
+                  selectedItems.delete(id);
+              }
+              localStorage.setItem("selectedItems", JSON.stringify([...selectedItems]));
+              updateCounter();
+          }
+      });
+
+        // Before submitting the action form, add hidden inputs for all selected IDs
+      const actionForm = document.getElementById("changelist-form");
+      if (actionForm) {
+          actionForm.addEventListener("submit", function (e) {
+              // Check if an action is being performed
+              const actionSelect = document.querySelector("select[name='action']");
+              if (!actionSelect || !actionSelect.value) {
+                  return; // No action selected, let normal submission continue
+              }
+
+              // Remove old hidden fields first
+              actionForm.querySelectorAll("input[name='_selected_action'][type='hidden']").forEach(el => el.remove());
+
+              // Add all selected IDs as hidden inputs
+              selectedItems.forEach(id => {
+                  let hidden = document.createElement("input");
+                  hidden.type = "hidden";
+                  hidden.name = "_selected_action";
+                  hidden.value = id;
+                  actionForm.appendChild(hidden);
+              });
+
+              // Clear localStorage after successful submission
+              localStorage.removeItem("selectedItems");
+          });
+      }
+
+      function updateCounter() {
+        const counter = document.querySelector(".action-counter");
+        if (counter) {
+            const count = selectedItems.size;
+            counter.textContent = count > 0 ? `${count} selected` : '';
+        }
+    }
+    });
+  </script>
 {{ media.js }}
 {% endblock %}
 
