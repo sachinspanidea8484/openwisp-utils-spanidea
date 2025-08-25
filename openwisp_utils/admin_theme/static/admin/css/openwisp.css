@@ -1686,9 +1686,13 @@ body::-webkit-scrollbar {
   mask-image: url(../../ui/openwisp/images/device-group.svg);
   -webkit-mask-image: url(../../ui/openwisp/images/device-group.svg);
 }
+.ow-test-group {
+  mask-image: url(../../ui/openwisp/images/test-group.svg);
+  -webkit-mask-image: url(../../ui/openwisp/images/test-group.svg);
+}
 .ow-template {
-  mask-image: url(../../ui/openwisp/images/template.svg);
-  -webkit-mask-image: url(../../ui/openwisp/images/template.svg);
+  mask-image: url(../../ui/openwisp/images/test-case.svg);
+  -webkit-mask-image: url(../../ui/openwisp/images/test-case.svg);
 }
 .ow-vpn {
   mask-image: url(../../ui/openwisp/images/vpn.svg);
@@ -1811,8 +1815,12 @@ body::-webkit-scrollbar {
   -webkit-mask-image: url(../../ui/openwisp/images/category.svg);
 }
 .ow-mass-upgrade {
-  mask-image: url(../../ui/openwisp/images/mass-upgrade.svg);
-  -webkit-mask-image: url(../../ui/openwisp/images/mass-upgrade.svg);
+  mask-image: url(../../ui/openwisp/images/test-execution.svg);
+  -webkit-mask-image: url(../../ui/openwisp/images/test-execution.svg);
+}
+.ow-test-management {
+  mask-image: url(../../ui/openwisp/images/test-management.svg);
+  -webkit-mask-image: url(../../ui/openwisp/images/test-management.svg);
 }
 
 /* NETWORK TOPOLOGY */
