@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
 
 /* LOGO */
 #swagger-ui > section > div.topbar > div > div > a > img {
-  content: url(../ui/openwisp/images/openwisp-logo-black.svg);
+  content: url(../ui/openwisp/images/NBL_Logo_rgb.png);
   width: 165px;
   height: 95px;
 }
