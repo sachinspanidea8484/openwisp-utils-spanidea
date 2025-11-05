@@ -28,8 +28,8 @@
 {{ block.super }}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    // Load selected IDs from localStorage
-    let selectedItems = new Set(JSON.parse(localStorage.getItem("selectedItems") || "[]"));
+    // Load selected IDs from sessionStorage
+    let selectedItems = new Set(JSON.parse(sessionStorage.getItem("selectedItems") || "[]"));
     
     // Restore checkboxes on page load
     document.querySelectorAll("input.action-select").forEach(cb => {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 selectedItems.delete(id);
             }
-            localStorage.setItem("selectedItems", JSON.stringify([...selectedItems]));
+            sessionStorage.setItem("selectedItems", JSON.stringify([...selectedItems]));
             updateCounter();
         }
     });
@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 actionForm.appendChild(hidden);
             });
             
-            // Clear localStorage after successful submission
-            localStorage.removeItem("selectedItems");
+            // Clear sessionStorage after successful submission
+            sessionStorage.removeItem("selectedItems");
         });
     }
     
