@@ -156,7 +156,7 @@ class FallbackTextField(FallbackMixin, FalsyValueNoneMixin, TextField):
             {
                 "form_class": forms.CharField,
                 "widget": forms.Textarea(
-                    attrs={"rows": 2, "cols": 34, "style": "width:auto"}
+                    attrs={"rows": 6, "cols": 34, "style": "width:auto"}
                 ),
             }
         )

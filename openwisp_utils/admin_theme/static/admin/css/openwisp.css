@@ -860,7 +860,7 @@ input[type="button"]:hover,
   margin-left: 2.5rem;
   width: 150px;
   height: 86px;
-  background: url("../../ui/openwisp/images/NBL_Logo_rgb.png")
+  background: url("../../ui/openwisp/images/nokia_updated_logo.svg")
     no-repeat scroll 0 50%/100%;
 }
 
@@ -1294,7 +1294,7 @@ h1#site-name {
   width: 165px;
   height: 95px;
   margin: auto;
-  background: url("../../ui/openwisp/images/NBL_Logo_rgb.png")
+  background: url("../../ui/openwisp/images/nokia_updated_logo.svg")
     no-repeat scroll 0 50%/100%;
   text-indent: -2000px;
 }
@@ -1507,7 +1507,7 @@ h1#site-name {
   #site-name a {
     width: 2.5rem;
     height: 2.5rem;
-    background: url("../../ui/openwisp/images/NBL_Logo_rgb.png")
+    background: url("../../ui/openwisp/images/nokia_updated_logo.svg")
       no-repeat center;
   }
   .hamburger {
@@ -1576,7 +1576,7 @@ body.login {
   display: block;
 }
 .login #site-name a {
-  background: url("../../ui/openwisp/images/NBL_Logo_rgb.png")
+  background: url("../../ui/openwisp/images/nokia_updated_logo.svg")
     no-repeat scroll 0 50%/100%;
   text-indent: -2000px;
   width: 150px;
