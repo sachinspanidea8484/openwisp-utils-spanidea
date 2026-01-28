@@ -1986,3 +1986,27 @@ label {
 }  */
 
 /* Add more selectors as needed for your custom admin UI */
+
+.import-preview .validation-error-container {
+    width: auto !important;
+    max-width: none !important;
+    white-space: normal;
+}
+
+.import-preview {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.import-preview th,
+.import-preview td {
+    word-wrap:normal;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+.import-preview td {
+    max-width: 300px;
+}
+
+
