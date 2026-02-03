@@ -8,9 +8,9 @@ API_INFO = getattr(
     settings,
     "OPENWISP_API_INFO",
     {
-        "title": "Nokia Bells API",
+        "title": "Nokia API",
         "default_version": "v1",
-        "description": "Nokia Bells REST API",
+        "description": "Nokia REST API",
     },
 )
 
